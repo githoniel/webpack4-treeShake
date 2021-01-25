@@ -15,8 +15,23 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 4096,
+            fallback: {
+              loader: 'file-loader',
+              options: {
+                name: 'img/[name].[hash:8].[ext]'
+              }
+            }
+          }
+        }],
       },
+      // {
+      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      //   type: 'asset/resource',
+      // }
     ],
   },
   output: {
