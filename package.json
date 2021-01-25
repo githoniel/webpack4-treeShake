@@ -10,7 +10,6 @@
   },
   "sideEffects": [
     "components/*",
-    "*.css",
-    "*.png"
+    "*.css"
   ]
 }
