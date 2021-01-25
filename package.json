@@ -1,0 +1,16 @@
+{
+  "name": "webpack-treeshake",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^5.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.17.0"
+  },
+  "sideEffects": [
+    "components/*",
+    "*.css",
+    "*.png"
+  ]
+}
